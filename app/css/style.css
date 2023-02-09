@@ -1741,56 +1741,9 @@ body.en {
     right: 0; }
   body.en .menu-line .title-mobile {
     background: url("../images/icons/rd.svg") no-repeat right center; }
-  body.en .menu-line .items .item {
-    font-family: 'assistant-bold';
-    font-size: 20px;
-    letter-spacing: 0.04em;
-    color: #000;
-    margin: 2%;
-    transition: 0.5s;
-    cursor: pointer;
-    text-align: center; }
-    body.en .menu-line .items .item:hover {
-      color: #8EE4FC; }
-    body.en .menu-line .items .item.active {
-      color: #8EE4FC; }
-  @media only screen and (max-width: 1200px) {
-    body.en .menu-line .items .item {
-      font-size: 18px; } }
   @media only screen and (max-width: 950px) {
-    body.en .menu-line .items {
-      flex-wrap: wrap; }
-      body.en .menu-line .items .item {
-        font-size: 18px;
-        text-align: right;
-        margin: 10px; } }
-  body.en section.contact {
-    background: url("../images/inner/bg-contact.png") no-repeat;
-    background-position: center center;
-    background-size: cover; }
-    body.en section.contact .subtitle {
-      font-family: 'assistant-regular';
-      font-size: 42px;
-      letter-spacing: 0.02em;
-      color: #fff; }
-    body.en section.contact .contacts {
-      margin-top: 35px; }
-      body.en section.contact .contacts .item {
-        display: flex;
-        align-items: center;
-        margin-top: 10px;
-        font-family: 'assistant-regular';
-        font-size: 18px;
-        color: #fff; }
-        body.en section.contact .contacts .item .icon {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          height: 20px;
-          width: 25px;
-          margin-left: 5px; }
-          body.en section.contact .contacts .item .icon img {
-            max-height: 100%; }
-    @media only screen and (max-width: 950px) {
-      body.en section.contact .subtitle {
-        font-size: 30px; } }
+    body.en .menu-line .items .item {
+      text-align: left; } }
+  body.en section.contact .contacts .item .icon {
+    margin-left: 0;
+    margin-right: 5px; }
