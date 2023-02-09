@@ -298,7 +298,8 @@ header {
     font-family: 'assistant-regular';
     font-size: 20px;
     color: #36527E;
-    margin: 0 25px; }
+    margin: 0 25px;
+    text-transform: uppercase; }
   header .menu-cont {
     width: auto;
     margin: 0 30px; }
