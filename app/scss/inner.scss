@@ -1,0 +1,610 @@
+/* ---------------------- Section top-inner ---------------------- */
+section.top-inner {
+	padding-top: 45px;
+    padding-bottom: 25px;							
+	color: #fff;
+    background: #051F42;
+	text-align: center;
+    position: relative;
+    z-index: 10;
+    max-width: none;
+	.section-inner {
+		z-index: 2;
+	}
+	.title {
+		@include f-b;
+		font-size: 36px;
+        letter-spacing: 0.1em;
+		line-height: 1;
+		margin: 0;
+	}
+
+	.breadcrumbs {
+		@include f-r;
+		font-size: 17px;
+        margin-top: 10px;
+        text-align: right;
+	}
+
+	@media only screen and (max-width : $lw) {
+        padding-top: 35px;
+        padding-bottom: 20px;	
+   
+	}
+
+    @media only screen and (max-width : $tw) {
+        padding-top: 35px;
+        padding-bottom: 20px;	
+
+	}
+
+    @media only screen and (max-width : $mw) {
+        padding-top: 25px;
+        padding-bottom: 15px;	
+        .title {
+            //font-size: 45px;
+        }
+        .breadcrumbs {
+            font-size: 16px;
+        }
+	}
+}
+/* --------------------- /Section top-inner ---------------------- */
+
+/* ---------------------- Section top-info ---------------------- */
+section.top-info {
+ 
+    &.no-text {
+        height: 460px;
+
+        @media only screen and (max-width : $mw) {
+            height: 250px;
+        }
+    }
+    .bg {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        video {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+}
+/* --------------------- /Section top-info ---------------------- */
+
+/* ---------------------- Section why ---------------------- */
+section.why {
+    .wrapper {
+        display: flex;
+        align-items: center;
+        margin: 0 -20px;
+    }
+
+    .section-title {
+        flex-shrink: 0;
+        margin: 0 20px;
+    }
+    .item {
+        display: flex;
+        align-items: center;
+        margin: 0 20px;
+        .icon {
+            width: 47px;
+            flex-shrink: 0;
+            margin-left: 15px;
+            img {
+                max-width: 100%;
+            }
+        }
+
+        .text {
+            @include f-sb;
+            font-size: 20px;
+            color: #000;
+        }
+    }
+
+    @media only screen and (max-width : $mw) {
+        .wrapper {
+            flex-wrap: wrap;
+        }
+        .item {
+            margin-top: 20px;
+        }
+    }
+}
+/* --------------------- /Section why ---------------------- */
+
+.video {
+    height: 600px;
+    position: relative;
+    @include flex-center;
+    >img {
+        height: 100%;
+    }
+
+    .play {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        z-index: 3;
+        cursor: pointer;
+    }
+
+    @media only screen and (max-width : $mw) {
+        height: 400px;
+    }
+}
+
+
+/* ---------------------- Section blog ---------------------- */
+section.blog {
+    .boxes {
+        display: flex;
+        flex-wrap: wrap;
+        font-size: 0;
+        margin: -35px 0;
+        .box {
+            width: 33.33%;
+            margin: 0;
+            padding: 35px 0;
+            display: block;
+        }
+    }
+
+    @media only screen and (max-width : $mw) {
+        .boxes {
+            margin: -15px 0;
+            .box {
+                width: 50%;
+                padding: 15px 0;
+            }
+        }
+    }
+}
+/* --------------------- /Section blog ---------------------- */
+
+.box-post-inner {
+    .inner {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        
+    }
+
+    .image {
+        height: 90px;
+        overflow: hidden;
+        @include flex-center;
+
+        img {
+
+        }
+    }
+    .text {
+        margin-top: 15px;
+        position: relative;
+        padding-bottom: 45px;
+        padding-left: 30px;
+        flex-grow: 1;
+        .title {
+            @include f-b;
+            font-size: 24px;
+            color: #000;
+        }
+
+        .desc {
+            @include f-l;
+            font-size: 20px;
+            color: #000;
+            margin-top: 10px;
+        }
+
+
+        .read-more {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+
+    }
+
+    @media only screen and (max-width : $tw) {
+
+        .text {
+            margin-top: 15px;
+            .title {
+                font-size: 20px;
+            }
+    
+            .desc {
+                font-size: 18px;
+            }
+        }
+    }
+
+    @media only screen and (max-width : $mw) {
+        .image {
+            height: 75px;
+        }
+
+        .text {
+            margin-top: 10px;
+            padding-bottom: 45px;
+            .title {
+                font-size: 18px;
+            }
+    
+            .desc {
+                font-size: 16px;
+            }
+
+            .part-bottom {
+                display: block;
+            }
+
+            .read-more {
+                margin: 0;
+                margin-right: 0px;
+                margin-top: 10px;
+            }
+        }
+    }
+}
+
+/* ---------------------- Section clients ---------------------- */
+section.clients {
+    .boxes {
+        display: flex;
+        flex-wrap: wrap;
+        font-size: 0;
+        margin: -15px;
+        margin-top: 70px;
+        .box {
+            width: 25%;
+            margin: 0;
+            padding: 15px;
+            display: block;
+            position: relative;
+            overflow: hidden;
+
+            &:after {
+                content: "";
+                position: absolute;
+                display: block;
+                top: 30px;
+                bottom: 30px;
+                left: 0;
+                width: 1px;
+                background: #DDDDDD;
+            }
+
+            &:before {
+                content: "";
+                position: absolute;
+                display: block;
+                left: 30px;
+                right: 30px;
+                bottom: 0;
+                height: 1px;
+                background: #DDDDDD;
+            }
+
+            &:nth-child(4n), &:last-child {
+                &:after {
+                    content: none;
+                }
+            }
+
+            &:nth-last-child(1), &:nth-last-child(2), &:nth-last-child(3), &:nth-last-child(4) {
+                &:before {
+                    content: none;
+                }
+            }
+            .inner {
+                overflow: hidden;
+                position: relative;
+                height: 100%;
+                @include flex-center;
+                img {
+                    max-height: 100%;
+                    max-width: 90%;
+                }
+            }
+        }
+    }
+
+    @media only screen and (max-width : $mw) {
+        .boxes {
+            margin: -10px -10px;
+            margin-top: 35px;
+            .box {
+                padding: 10px 10px;
+                width: 50%;
+
+                &:nth-child(4n) {
+                    &:after {
+                        content: "";
+                    }
+                }
+    
+                &:nth-last-child(1), &:nth-last-child(2), &:nth-last-child(3), &:nth-last-child(4) {
+                    &:before {
+                        content: "";
+                    }
+                }
+
+                &:nth-child(2n) {
+                    &:after {
+                        content: none;
+                    }
+                }
+    
+                &:nth-last-child(1), &:nth-last-child(2) {
+                    &:before {
+                        content: none;
+                    }
+                }
+
+            }
+        }
+    }
+}
+/* --------------------- /Section clients ---------------------- */
+
+.menu-line {
+    margin-top: 45px;
+
+    .title-mobile {
+        @include f-b;
+        font-size: 20px;
+        letter-spacing: 0.04em;
+        color: #000;
+        background: url("../images/icons/rd.svg") no-repeat left center;
+
+        display: none;
+    }
+    .items {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .item {
+            @include f-b;
+            font-size: 20px;
+            letter-spacing: 0.04em;
+            color: #000;
+            margin: 2%;
+            transition: 0.5s;
+            cursor: pointer;
+            text-align: center;
+            &:hover {
+                color: #8EE4FC;
+            }
+            &.active {
+                color: #8EE4FC;
+            }
+        }
+    }
+
+    @media only screen and (max-width : $tw) {
+        .items {
+            .item {
+                font-size: 18px;
+            }
+        }
+    }
+
+    @media only screen and (max-width : $mw) {
+        //padding: 5px;
+        //border: 1px solid #000;
+        .title-mobile {
+            //display: block;
+        }
+        .items {
+            //display: block;
+            //display: none;
+            flex-wrap: wrap;
+            .item {
+                font-size: 18px;
+                text-align: right;
+                margin: 10px;
+            }
+        }
+    }
+}
+
+/* ---------------------- Section contact ---------------------- */
+section.contact {
+    background: url("../images/inner/bg-contact.png") no-repeat;
+    background-position: center center;
+    background-size: cover;
+    .subtitle {
+        @include f-r;
+        font-size: 42px;
+        letter-spacing: 0.02em;
+        color: #fff;
+    }
+
+    .contacts {
+        margin-top: 35px;
+        .item {
+            display: flex;
+            align-items: center;
+            margin-top: 10px;
+            @include f-r;
+            font-size: 18px;
+            color: #fff;
+            .icon {
+                @include flex-center;
+                height: 20px;
+                width: 25px;
+                margin-left: 5px;
+                img {
+                    max-height: 100%;
+                }
+            }
+        }
+    }
+
+    @media only screen and (max-width : $mw) {
+        .subtitle {
+            font-size: 30px;;
+        }
+    }
+
+    
+}
+/* --------------------- /Section contact ---------------------- */
+
+/* ----------------- wpcf7-------------------- */
+.wpcf7 {
+	margin: auto;
+	text-align: center;
+    position: relative;
+    margin-top: 35px;
+	input[type="url"], input[type="email"], input[type="tel"] {
+		direction: rtl;
+	}
+	input, select, textarea {
+		@include f-sb;
+		font-size: 20px;
+		border: none;
+		color: #fff;
+		@include placeholder-color(#fff);
+
+		background: transparent;
+		outline: none;
+		padding: 20px 0px;
+        border-bottom: 2px solid #fff;
+		width: 100%;
+
+		direction: rtl;
+
+		&:focus {
+			//@include placeholder-color(#713F99);
+			//color: #713F99;
+		}
+	}
+
+    select {
+        padding-left: 25px;
+        appearance: none;
+        background: #535353 url("../images/icons/rdw.svg") no-repeat;
+        background-position: left 20px center;
+    }
+
+    textarea {
+        border-radius: 24px;
+        height: 130px;
+        padding: 20px 20px;
+    }
+    form {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin: 0 -20px;    
+    }
+	.wpcf7-form-control-wrap {
+		display: block;
+		position: relative;
+		padding: 0 20px;
+        flex: 1 50%;
+
+        &[data-name="your-message"] {
+            flex: 1 100%;
+        }
+	}
+
+    .wrapper-submit {
+        flex-basis: 150px;
+        flex-grow: 0;
+        flex-shrink: 0;
+        background: url("../images/icons/arrow-green-left.svg") no-repeat;
+        background-position: left center;
+        margin-top: 35px;
+    }
+   
+	input[type="submit"] {
+		border: none;
+        cursor: pointer;
+        @include f-b;
+        font-size: 18px;
+        color: #fff;
+       
+        appearance: none;
+        transition: 0.5s;
+       
+	}
+	
+
+
+	span[role="alert"] {
+		@include f-r;
+		font-size: 14px;
+		color: #DF0707;
+		position: absolute;
+		left: 0;
+		bottom: -20px;
+	}
+	.wpcf7-response-output {
+		@include f-r;
+		font-size: 14px;
+		color: #DF0707;
+		position: absolute;
+		
+    	bottom: -45px;
+        right: 0;
+    	border: none !important;
+   	 	padding: 0 !important;
+    	margin: 0 !important;
+	}
+
+    .wpcf7-not-valid-tip {
+        font-size: 13px;
+        position: absolute;
+    }
+	.wpcf7-spinner {
+        position: absolute;
+	}
+
+	@media only screen and (max-width : $mw) {
+        margin-top: 5px;
+        input, select, textarea {
+            padding: 15px 0px;
+        }
+        form {
+            flex-wrap: wrap;
+            justify-content: center;
+
+            .wpcf7-form-control-wrap {
+                flex: 1 100%;
+                width: 100%;
+                padding: 0 30px;
+                
+            }
+    
+            .wrapper-submit {
+                width: auto;
+                flex: 0 0;
+                
+            }
+        }
+		.wpcf7-form-control-wrap {
+            flex: 1 100%;
+			width: 100%;
+            margin-top: 25px;
+		}
+
+		.wrapper-submit {
+            width: auto;
+            flex-grow: 0;
+        }
+	}
+}
+/* ----------------- /wpcf7-------------------- */
